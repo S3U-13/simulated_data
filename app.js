@@ -1,11 +1,19 @@
+// app.js
 const express = require("express");
+const cors = require("cors");
+const userRoutes = require("./routes/userRoutes");
+const adminRoutes = require("./routes/adminRoutes");
+const authRoutes = require("./routes/authRoutes");
+const publicRoutes = require("./routes/publicRoutes");
+
 const app = express();
-const PORT = 3000;
 
 app.use(express.json());
+app.use(cors());
 
-// Import routes
-const userRoutes = require("./routes/userRoutes");
-app.use("/api", userRoutes);
-
-app.listen(PORT, () => console.log(`Server running at http://localhost:${PORT}`));
+app.use("/api", authRoutes);
+app.use("/api/user", userRoutes);
+app.use("/api/admin", adminRoutes);
+app.use("/api/public", publicRoutes);
+ 
+module.exports = app;
