@@ -491,6 +491,93 @@ module.exports = {
         type: Sequelize.STRING(40),
       },
     });
+
+    await queryInterface.createTable("app_group", {
+      id: {
+        allowNull: true,
+        primaryKey: true,
+        type: Sequelize.INTEGER,
+      },
+      groupname: {
+        allowNull: true,
+        type: Sequelize.STRING(100),
+      },
+      active: {
+        allowNull: true,
+        type: Sequelize.STRING(1),
+      },
+      edituserid: {
+        allowNull: true,
+        type: Sequelize.INTEGER,
+      },
+      userlogid: {
+        allowNull: true,
+        type: Sequelize.INTEGER,
+      },
+    });
+    await queryInterface.createTable("app_position", {
+      positionID: {
+        allowNull: true,
+        primaryKey: true,
+        type: Sequelize.INTEGER,
+      },
+      positionname: {
+        allowNull: true,
+        type: Sequelize.STRING(70),
+      },
+      posID: {
+        allowNull: true,
+        type: Sequelize.INTEGER,
+      },
+      PPK: {
+        allowNull: true,
+        type: Sequelize.INTEGER,
+      },
+      Nurse: {
+        allowNull: true,
+        type: Sequelize.TINYINT,
+      },
+      comment: {
+        allowNull: true,
+        type: Sequelize.TEXT,
+      },
+      officegroup: {
+        allowNull: true,
+        type: Sequelize.TINYINT,
+      },
+      Businessgroup: {
+        allowNull: true,
+        type: Sequelize.TINYINT,
+      },
+      FrameAmount: {
+        allowNull: true,
+        type: Sequelize.INTEGER,
+      },
+      Shortname: {
+        allowNull: true,
+        type: Sequelize.STRING(100),
+      },
+      JobDesc: {
+        allowNull: true,
+        type: Sequelize.INTEGER,
+      },
+      Educate: {
+        allowNull: true,
+        type: Sequelize.STRING(10),
+      },
+      UserKey: {
+        allowNull: true,
+        type: Sequelize.INTEGER,
+      },
+      KeyDate: {
+        allowNull: true,
+        type: Sequelize.DATE,
+      },
+      UptoDate: {
+        allowNull: true,
+        type: Sequelize.DATE,
+      },
+    });
   },
 
   async down(queryInterface, Sequelize) {
