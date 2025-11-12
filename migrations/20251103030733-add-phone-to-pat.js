@@ -141,7 +141,7 @@ module.exports = {
         allowNull: true,
         type: Sequelize.DATE,
       },
-      birhtdatetime: {
+      birthdatetime: {
         allowNull: true,
         type: Sequelize.DATE,
       },
