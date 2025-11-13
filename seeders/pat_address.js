@@ -1,6 +1,7 @@
 const PatAddress = require("../models/pat_address"); // model ที่ import มา
 async function seed() {
   await PatAddress.bulkCreate([
+    "pat_address",
     {
       id: 1,
       hn: 6815412,
@@ -175,3 +176,5 @@ async function seed() {
 
   console.log("✅ Pat address seeded with Pat address");
 }
+
+seed();
