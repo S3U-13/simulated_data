@@ -364,7 +364,7 @@ module.exports = {
         allowNull: true,
         type: Sequelize.STRING(10),
       },
-      doctorspecialisr: {
+      doctorspecialist: {
         allowNull: true,
         type: Sequelize.STRING(3),
       },
