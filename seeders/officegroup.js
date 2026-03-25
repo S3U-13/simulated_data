@@ -112,3 +112,5 @@ async function seed() {
 
   console.log("Office Group seeder success");
 }
+
+seed();
